@@ -1,9 +1,9 @@
-package uk.gov.hmcts.reform.LRD.performance.scenarios.utils
+package uk.gov.hmcts.reform.CRD.performance.scenarios.utils
 
 import com.warrenstrange.googleauth.GoogleAuthenticator
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
-import uk.gov.hmcts.reform.LRD.performance.scenarios.utils.Environment._
+import uk.gov.hmcts.reform.CRD.performance.scenarios.utils.Environment._
 
 object  S2SHelper {
 

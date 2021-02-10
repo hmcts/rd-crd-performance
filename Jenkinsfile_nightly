@@ -16,14 +16,14 @@ properties([
 
 def type = "java"
 def product = "rd"
-def component = "location-ref-api"
+def component = "caseworker-ref-api"
 
 def secrets = [
-      's2s-aat': [
-        secret('microservicekey-rd-location-ref-api', 'S2S_SECRET')
+      'rd-aat': [
+        secret('caseworker-ref-api-s2s-secret', 'S2S_SECRET')
     ],
       'rd-aat': [
-        secret('LOC-REF-OAUTH2-CLIENT-SECRET', 'IDAM_SECRET')
+        secret('CA-REF-OAUTH2-CLIENT-SECRET', 'IDAM_SECRET')
     ]
 ]
 
