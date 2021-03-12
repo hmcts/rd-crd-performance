@@ -1,3 +1,3 @@
-Gatling nightly performance tests for Caseworker Reference Data (CRD)
+Gatling performance tests for Caseworker Reference Data (CRD) - Perftest
 
                 

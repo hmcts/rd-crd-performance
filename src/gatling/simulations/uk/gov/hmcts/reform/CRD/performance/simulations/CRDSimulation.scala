@@ -14,9 +14,9 @@ class CRDSimulation extends Simulation{
     {
         exec(IDAMHelper.getIdamToken)
         .exec(S2SHelper.S2SAuthToken)
-        .exec(PostScenario.PostScenario)
+        .exec(Scenario1.Scenario1)
     }
 
-  setUp(CRDScenario.inject(rampUsers(10) during(300))).protocols(httpProtocol)
+  setUp(CRDScenario.inject(rampUsers(1) during(10))).protocols(httpProtocol)
   .assertions(global.successfulRequests.percent.is(100))
 }
