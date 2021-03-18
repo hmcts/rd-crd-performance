@@ -14,7 +14,7 @@ object Scenario1 {
     exec(http(requestName = "CRD_010_010_UploadCaseworkers")
       .post("/refdata/case-worker/upload-file")
       .headers(Environment.headers_auth)
-      .formUpload("file", "Staff Data Upload Template V1.0.2-Amog (1) - 81-90.xlsx")
+      .formUpload("file", "Staff Data Upload Template V1.0.2-Amog (1) - 91-110.xlsx")
       .check(status.is(200)))
   }
 
@@ -25,7 +25,7 @@ object Scenario1 {
     exec(http(requestName = "CRD_020_010_UploadRoleMappings")
       .post("/refdata/case-worker/upload-file")
       .headers(Environment.headers_auth)
-      .formUpload("file", "Service to IDAM Role Mapping-5.xlsx")
+      .formUpload("file", "Service to IDAM Role Mapping-6.xlsx")
       .check(status.is(200)))
   }
 
