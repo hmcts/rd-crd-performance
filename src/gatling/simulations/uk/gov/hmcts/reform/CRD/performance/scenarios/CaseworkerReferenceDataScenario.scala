@@ -14,7 +14,7 @@ object CaseworkerReferenceDataScenario {
     exec(http(requestName = "CRD_010_010_UploadCaseworkers")
       .post("/refdata/case-worker/upload-file")
       .headers(Environment.headers_auth)
-      .formUpload("file", "Staff Data Upload Template V1.0.2-Amog (1) - Mixed 1 new.xlsx")
+      .formUpload("file", "Staff Data Upload Template V1.0.2-Amog (1) - Mixed 1 new 2.xlsx")
       .check(status.is(200)))
   }
 
