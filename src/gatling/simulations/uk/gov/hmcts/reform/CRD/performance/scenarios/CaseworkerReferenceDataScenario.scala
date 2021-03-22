@@ -5,16 +5,16 @@ import io.gatling.http.Predef._
 import uk.gov.hmcts.reform.CRD.performance.scenarios.utils.Environment
 import uk.gov.hmcts.reform.CRD.performance.scenarios.utils.Environment._
 
-object Scenario1 {
+object CaseworkerReferenceDataScenario {
 
-  val Scenario1 = scenario("Scenario 1")
+  val CaseworkerReferenceScenario = scenario("Caseworker Reference Data Scenario")
 
   // Uploads caseworkers to CRD database
   .group("CRD_010_UploadCaseworkers") {
     exec(http(requestName = "CRD_010_010_UploadCaseworkers")
       .post("/refdata/case-worker/upload-file")
       .headers(Environment.headers_auth)
-      .formUpload("file", "Staff Data Upload Template V1.0.2-Amog (1) - 181-229.xlsx")
+      .formUpload("file", "Staff Data Upload Template V1.0.2-Amog (1) - 1-10.xlsx")
       .check(status.is(200)))
   }
 
