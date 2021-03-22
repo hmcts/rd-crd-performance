@@ -11,10 +11,34 @@ object CaseworkerReferenceDataScenario {
 
   // Uploads caseworkers to CRD database
   .group("CRD_010_UploadCaseworkers") {
-    exec(http(requestName = "CRD_010_010_UploadCaseworkers")
+    exec(http(requestName = "CRD_010_010_UploadCaseworkers1")
       .post("/refdata/case-worker/upload-file")
       .headers(Environment.headers_auth)
-      .formUpload("file", "Staff Data Upload Template V1.0.2-Amog (1) - Mixed 1 new 3.xlsx")
+      .formUpload("file", "Staff Data Upload Template V1.0.2-Amog (1) - Mixed 2 new.xlsx")
+      .check(status.is(200)))
+
+    .exec(http(requestName = "CRD_010_020_UploadCaseworkers2")
+      .post("/refdata/case-worker/upload-file")
+      .headers(Environment.headers_auth)
+      .formUpload("file", "Staff Data Upload Template V1.0.2-Amog (1) - Mixed 3 new.xlsx")
+      .check(status.is(200)))
+
+    .exec(http(requestName = "CRD_010_030_UploadCaseworkers3")
+      .post("/refdata/case-worker/upload-file")
+      .headers(Environment.headers_auth)
+      .formUpload("file", "Staff Data Upload Template V1.0.2-Amog (1) - Mixed 4 new.xlsx")
+      .check(status.is(200)))
+
+    .exec(http(requestName = "CRD_010_040_UploadCaseworkers4")
+      .post("/refdata/case-worker/upload-file")
+      .headers(Environment.headers_auth)
+      .formUpload("file", "Staff Data Upload Template V1.0.2-Amog (1) - Mixed 5 new.xlsx")
+      .check(status.is(200)))
+
+    .exec(http(requestName = "CRD_010_050_UploadCaseworkers5")
+      .post("/refdata/case-worker/upload-file")
+      .headers(Environment.headers_auth)
+      .formUpload("file", "Staff Data Upload Template V1.0.2-Amog (1) - Mixed 6 new.xlsx")
       .check(status.is(200)))
   }
 
