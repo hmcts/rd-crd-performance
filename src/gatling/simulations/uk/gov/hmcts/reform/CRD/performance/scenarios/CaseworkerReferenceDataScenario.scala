@@ -9,6 +9,7 @@ object CaseworkerReferenceDataScenario {
 
   val CaseworkerReferenceScenario = scenario("Caseworker Reference Data Scenario")
 
+/*
   // Uploads caseworkers to CRD database
   .group("CRD_010_UploadCaseworkers") {
     exec(http(requestName = "CRD_010_010_UploadCaseworkers1")
@@ -54,6 +55,7 @@ object CaseworkerReferenceDataScenario {
   }
 
   .pause(thinkTime)
+*/
 
   // Fetches caseworkers from CRD database
   .group("CRD_030_FetchCaseworkers") {
