@@ -11,8 +11,8 @@ class CRDSimulation extends Simulation{
 
   val rampUpDurationMins = 2
   val rampDownDurationMins = 2
-  val testDurationMins = 30
-  val HourlyTarget:Double = 166
+  val testDurationMins = 60
+  val HourlyTarget:Double = 83
   val RatePerSec = HourlyTarget / 3600
 
   val httpProtocol = http
