@@ -17,9 +17,16 @@ object Environment {
   val s2sService = "rd_caseworker_ref_api"
   val s2sSecret = ""
 
+  //ASB API URL
+  val asbUrl = "https://rd-servicebus-perftest.servicebus.windows.net/rd-caseworker-topic-perftest"
+
   val headers_auth = Map(
    "Authorization" -> "Bearer ${accessToken}",
    "serviceAuthorization" -> "${s2sToken}"
+  )
+
+  val headers_asb_auth = Map(
+   "Authorization" -> "${sasToken}"
   )
 
   val headers_json = Map(
