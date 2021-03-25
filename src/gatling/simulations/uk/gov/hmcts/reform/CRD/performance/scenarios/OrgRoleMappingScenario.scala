@@ -10,9 +10,9 @@ object OrgRoleMappingScenario {
   val url = "sb://rd-servicebus-perftest.servicebus.windows.net"
   val keyName = "SendAndListenSharedAccessKey"
   //PerfTest
-  val keyVale = ""
+  val keyValue = ""
 
-  private def sasToken(): String = String.valueOf(ASBHelper.getSaSToken(url, keyName, keyVale))
+  private def sasToken(): String = String.valueOf(ASBHelper.getSaSToken(url, keyName, keyValue))
 
 val OrgRoleMappingScenario = scenario("Organisation Role Mapping Scenario")
   .exec(_.setAll(
