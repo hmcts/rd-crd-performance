@@ -14,7 +14,7 @@ object OrgRoleMappingScenario {
     ("sasToken",sasToken())
   ))
 
-  .exec(http(requestName="ORM_010_publishCaseworkers")
+  .exec(http(requestName="ORM_010_PublishCaseworkers")
     .post("/messages")
     .headers(Environment.headers_asb_auth)
     .headers(Environment.headers_json)
