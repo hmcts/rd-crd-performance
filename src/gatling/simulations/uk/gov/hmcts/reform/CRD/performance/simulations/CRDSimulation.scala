@@ -19,7 +19,7 @@ class CRDSimulation extends Simulation{
     //.proxy(Proxy("proxyout.reform.hmcts.net", 8080).httpsPort(8080))
     .baseUrl(Environment.baseURL)
 
-  val httpProtocolAsb = http
+  val httpProtocolASB = http
     .baseUrl(Environment.asbUrl)
 
   val CRDScenario = scenario("CRDScenario").repeat(1)
@@ -34,10 +34,9 @@ class CRDSimulation extends Simulation{
       exec(OrgRoleMappingScenario.OrgRoleMappingScenario)
     }
 
-  setUp(ASBScenario.inject(rampUsers(10) during(60))).protocols(httpProtocolAsb)
-  /*setUp(CRDScenario.inject(rampUsersPerSec(0.00) to (RatePerSec) during (rampUpDurationMins minutes),
+  setUp(ASBScenario.inject(rampUsersPerSec(0.00) to (RatePerSec) during (rampUpDurationMins minutes),
     constantUsersPerSec(RatePerSec) during (testDurationMins minutes),
     rampUsersPerSec(RatePerSec) to (0.00) during (rampDownDurationMins minutes)))
-  .protocols(httpProtocol)*/
+  .protocols(httpProtocolASB)
 
 }
