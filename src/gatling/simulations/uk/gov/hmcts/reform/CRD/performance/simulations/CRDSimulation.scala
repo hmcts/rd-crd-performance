@@ -7,7 +7,8 @@ import uk.gov.hmcts.reform.CRD.performance.scenarios._
 
 class CRDSimulation extends Simulation{
 
-  val httpProtocol = http.proxy(Proxy("proxyout.reform.hmcts.net", 8080).httpsPort(8080))
+  val httpProtocol = http
+    //.proxy(Proxy("proxyout.reform.hmcts.net", 8080).httpsPort(8080))
     .baseUrl(Environment.baseURL)
 
   val CRDScenario = scenario("CRDScenario").repeat(1)
