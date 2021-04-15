@@ -34,9 +34,10 @@ class CRDSimulation extends Simulation{
       exec(OrgRoleMappingScenario.OrgRoleMappingScenario)
     }
 
-  setUp(ASBScenario.inject(rampUsersPerSec(0.00) to (RatePerSec) during (rampUpDurationMins minutes),
+  setUp(ASBScenario.inject(rampUsers(1) during(10))).protocols(httpProtocolASB)
+    /*setUp(CRDScenario.inject(rampUsersPerSec(0.00) to (RatePerSec) during (rampUpDurationMins minutes),
     constantUsersPerSec(RatePerSec) during (testDurationMins minutes),
     rampUsersPerSec(RatePerSec) to (0.00) during (rampDownDurationMins minutes)))
-  .protocols(httpProtocolASB)
+  .protocols(httpProtocol)*/
 
 }
