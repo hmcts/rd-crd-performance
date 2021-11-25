@@ -10,7 +10,7 @@ object PostScenario {
     .exec(http(requestName="CRD_010_UploadFile1")
       .post("/refdata/case-worker/upload-file")
       .headers(Environment.headers_1)
-      .formUpload("file", "Staff Data Upload Template V1.0.1 (6).xlsx")
+      .formUpload("file", "Staff Data Upload Template.xlsx")
       .check(status.is(200)))
     .pause(2)
 
