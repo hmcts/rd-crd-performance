@@ -18,6 +18,6 @@ class CRDSimulation extends Simulation{
         .exec(PostScenario.PostScenario)
     }
 
-  setUp(CRDScenario.inject(rampUsers(10) during(300))).protocols(httpProtocol)
+  setUp(CRDScenario.inject(rampUsers(10) during(200))).protocols(httpProtocol)
   .assertions(global.successfulRequests.percent.is(100))
 }
